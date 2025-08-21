@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ Cleofe</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    
+
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo fade-in-left">
+                <h2><a href="#home"><i>CJ.</i></a></h2>
+            </div>
+            <div class="links fade-in-right">
+                <div class="link"><a href="#home">Home</a></div>
+                <div class="link"><a href="#aboutMe">About</a></div>
+                <div class="link"><a href="#">Portfolio</a></div>
+                <div class="link"><a href="#">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburger"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#aboutMe">About</a>
+                <a href="">Portfolio</a>
+                <a href="">Contact</a>
+                <i class="fa-solid fa-xmark cancel"></i>
+            </div>
+        </div>
+        <div>
+    </nav>
+
+    <section id="home">
+            <div class="main-container">
+                <div class="image">
+                    <img src="/assets/images/CJPC.JPG" alt="CJ Image">
+                </div>
+                <div class="content">
+                    <h2>Hello I'm</h2>
+                    <h1><span>Christine Joy Cleofe</span></h1>
+                    <div class="typewriter">
+                        <h2 class="auto-type"></h2>
+                    </div>
+                    <div class="btn">
+                        <button class="proj"><a href="#" style= "text-decoration: none; color: white">Projects</a></button>
+                        <button class="resume" onclick="openResume()">Resume</button>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/christinejoyyyyy"><i class="fa-brands fa-github" style="color: #d25380;"></i></i></a>
+                        <a href="https://www.linkedin.com/in/christine-joy-cleofe/"><i class="fa-brands fa-linkedin-in" style="color: #d25380;"></i></a>
+                        <a href="https://www.facebook.com/christinejoy.cleofe"><i class="fa-brands fa-facebook-f" style="color: #d25380;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="aboutMe">
+            <div class="about fade-in">
+                <h3>INTRODUCTION</h3>
+                <h1>About Me</h1>
+            </div>
+            
+            <div class="aboutme-content">
+                <div class="abt-info fade-in-left">
+                    <h1>Designing, Building,<br>& Exploring every path <br>in tech.</h1>
+                    <p>I'm a designer and project manager with a background in development, cloud, and networking. <br> <br>I enjoy transforming ideas into intuitive digital experiences and take pride in delivering projects with both creativity and technical precision. <br><br>My strength is in bridging design and technology to craft solutions that are visually engaging and functionally effective.</p>
+                </div>
+                
+                <div class="aboutcj-img scale-in">
+                    <img src="/assets/images/abtme.png" alt="About Me Image">
+                </div>
+                
+                <div class="timeline-container fade-in-right">
+                    <div class="timeline-header">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h2>Education</h2>
+                    </div>
+                    
+                    <div class="vertical-timeline">
+                       <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="school-logo">
+                                    <img src="/assets/images/unc-logo.png" alt="University Logo">
+                                </div>
+                                <h3>Bachelor's Degree in Information Technology</h3>
+                                <p><i>University of Nueva Caceres</i></p>
+                                <span class="year">2021 - 2025</span>
+                                <ul>
+                                    <li>Cum Laude GWA of 1.31</li>
+                                    <li>Outstanding Capstone Project</li>
+                                    <li>Deans Lister (2021-2025)</li>
+                                    <li>Outstanding in Athletics</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="school-logo">
+                                    <img src="/assets/images/unc-logo.png" alt="University Logo">
+                                </div>
+                                <h3>TVL-ICT Computer Programming</h3>
+                                <p><i>University of Nueva Caceres</i></p>
+                                <span class="year">2019 - 2021</span>
+                                <ul>
+                                    <li>With Honors</li>
+                                    <li>Outstanding in Mathematics</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <section class="experiences">
+                <div class="abt-exp fade-in">
+                    <h3>MY PROFESSIONAL JOURNEY</h3>
+                    <h1>Experience</h1>
+                </div>
+
+                <div class="exp-timeline-container fade-in-up">
+                    <div class="exp-timeline-nav">
+                        <button class="nav-arrow" id="prevBtn" onclick="navigateTimeline(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-tabs" id="timelineTabs">
+                                <div class="timeline-tab active" data-experience="0">
+                                    <div class="tab-year">2025</div>
+                                    <div class="tab-duration">Mar - May</div>
+                                    <div class="tab-company">The SmartBridge</div>
+                                </div>
+                                
+                                <div class="timeline-tab" data-experience="1">
+                                    <div class="tab-year">2024 - 2025</div>
+                                    <div class="tab-duration">Oct - Mar</div>
+                                    <div class="tab-company">Accenture Academy Technology</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="nav-arrow" id="nextBtn" onclick="navigateTimeline(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="timeline-progress">
+                        <div class="exp-progress-bar" id="progressBar"></div>
+                    </div>
+                    
+                    <div class="progress-indicators" id="progressDots"></div>
+
+                    <div class="experience-details show" id="experienceDetails">
+                        <div class="details-header">
+                            <div class="company-logo">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="title-company-container">
+                                <h2 class="job-title"></h2>
+                                <p class="company-name"></p>
+                            </div>
+                        </div>
+                        <ul class="achievements"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills">
+                <div class="abt-skills scale-in">
+                    <h3>TECHNICAL PROFICIENCIES</h3>
+                    <h1>Skills</h1>
+                </div>
+                <div class="skills-container">
+                    <div class="row scale-in">
+                        <div class="myskills">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h2>Web Development</h2>
+                            <p>Building responsive and functional websites with a focus on clean code, usability, and performance.</p>
+                        </div>
+                        <div class="myskills">
+                            <i class="fa-solid fa-palette"></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Designing intuitive and engaging user interfaces using tools like Figma and Canva, with attention to both aesthetics and functionality.</p>
+                        </div>
+                        <div class="myskills">
+                            <i class="fa-brands fa-trello"></i>
+                            <h2>Project Management</h2>
+                            <p>Leading teams and Managing projects using Agile Scrum methodology and tools like Trello, ensuring tasks are well-organized, collaborative, and delivered on time.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech-stack">
+                <div class="tech-skills scale-in">
+                    <h1>Tech Stack & Tools</h1>
+                </div>
+                <div class="marquee-container">
+                    <div class="marquee-row">
+                        <div class="marquee-track scroll-left">
+                            <div class="tech-item">
+                                <div class="tech-icon html">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span class="tech-name">HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon css">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span class="tech-name">CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon javascript">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon react">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <span class="tech-name">React</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon java">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java Logo" width="40" height="40"/>
+                                </div>
+                                <span class="tech-name">Java</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon sql">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <span class="tech-name">SQL</span>
+                            </div>
+
+                            <!--Duplicate-->
+                            <div class="tech-item">
+                                <div class="tech-icon html">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span class="tech-name">HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon css">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span class="tech-name">CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon javascript">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon react">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <span class="tech-name">React</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon java">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java Logo" width="40" height="40"/>
+                                </div>
+                                <span class="tech-name">Java</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon sql">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <span class="tech-name">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--SECOND ROW-->
+                    <div class="marquee-row">
+                        <div class="marquee-track scroll-right">
+                            <div class="tech-item">
+                                <div class="tech-icon git">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div class="tech-name">Git</div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="tech-name">Github</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon mysql">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">MySQL</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon vscode">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">VS Code</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon figma">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">Figma</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon bootstrap">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <span class="tech-name">Bootstrap</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon aws">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <span class="tech-name">AWS</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon packettrcr">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco Packet Tracer" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">Packet Tracer</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon trello">
+                                    <i class="fa-brands fa-trello"></i>
+                                </div>
+                                <span class="tech-name">Trello</span>
+                            </div>
+
+
+                            <!--Duplicate-->
+                            <div class="tech-item">
+                                <div class="tech-icon git">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div class="tech-name">Git</div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="tech-name">Github</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon mysql">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">MySQL</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon vscode">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">VS Code</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon figma">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma Logo" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">Figma</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon bootstrap">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <span class="tech-name">Bootstrap</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon aws">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <span class="tech-name">AWS</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon packettrcr">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco Packet Tracer" width="30" height="30"/>
+                                </div>
+                                <span class="tech-name">Packet Tracer</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon trello">
+                                    <i class="fa-brands fa-trello"></i>
+                                </div>
+                                <span class="tech-name">Trello</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="/script.js"></script>
+    <script src="/timeline.js"></script>
+
+</body>
+</html>
