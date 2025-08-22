@@ -48,8 +48,6 @@ function openResume() {
 }
 
 
-
-
 // ========== SCROLL ANIMATIONS JavaScript ========== 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -283,5 +281,46 @@ function debounce(func, wait) {
     };
 }
 
+
+
+const cardList = document.querySelector(".card-list");
+const cards = document.querySelectorAll(".card-item");
+const pagination = document.querySelector(".slider-pagination");
+
+let currentIndex = 1; // start at 2nd card
+const totalSlides = cards.length;
+
+// Create bullets
+for (let i = 0; i < totalSlides; i++) {
+  const bullet = document.createElement("div");
+  bullet.classList.add("bullet");
+  if (i === currentIndex) bullet.classList.add("active"); // match default index
+  bullet.addEventListener("click", () => goToSlide(i));
+  pagination.appendChild(bullet);
+}
+
+function updateActiveCard() {
+  cards.forEach((card, i) => {
+    card.classList.toggle("active", i === currentIndex);
+  });
+
+  document.querySelectorAll(".bullet").forEach((b, i) => {
+    b.classList.toggle("active", i === currentIndex);
+  });
+
+  const offset =
+    -(currentIndex * (cards[0].offsetWidth + 24)) +
+    (cardList.offsetWidth / 2 - cards[0].offsetWidth / 2);
+
+  cardList.style.transform = `translateX(${offset}px)`;
+}
+
+function goToSlide(index) {
+  currentIndex = index;
+  updateActiveCard();
+}
+
+// Init
+updateActiveCard();
 
 

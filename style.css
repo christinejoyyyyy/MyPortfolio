@@ -288,7 +288,8 @@ section {
 .about,
 .abt-exp,
 .abt-skills,
-.tech-skills{
+.tech-skills,
+.portf{
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -298,7 +299,8 @@ section {
 
 .about h3,
 .abt-exp h3,
-.abt-skills h3 {
+.abt-skills h3,
+.portf h3{
     font-weight: 400;
     color: #383838;
     margin: auto;
@@ -311,7 +313,8 @@ section {
 .about h1,
 .abt-exp h1,
 .abt-skills h1,
-.tech-skills h1{
+.tech-skills h1,
+.portf h1{
     font-size: 3rem;
     color: rgb(210, 83, 128);
     margin: auto;
@@ -320,7 +323,8 @@ section {
     font-weight: 700;
 }
 
-#aboutMe {
+#aboutMe,
+#portfolio {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -581,7 +585,7 @@ section {
     flex: 1;
     overflow: hidden;
     position: relative;
-    padding: 10px 0;
+    padding: 10px 10px;
     min-width: 0;
 }
 
@@ -635,8 +639,8 @@ section {
 }
 
 .tab-year{
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 300;
     margin-bottom: 8px;
     color: rgb(210, 83, 128);
     text-align: center;
@@ -646,20 +650,9 @@ section {
     color: white;
 }
 
-.tab-duration{
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.timeline-tab.active .tab-duration{
-    color: white;
-}
-
 .tab-company{
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 400;
     color: #383838;
     text-align: center;
 }
@@ -813,13 +806,19 @@ section {
 
 
 /**=============SKILLS===============**/
-.skills,
-.tech-stack{
+.skills{
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin-bottom: 3rem;
+}
+
+.tech-stack{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .skills-container{
@@ -874,7 +873,7 @@ section {
 /*========TECH STACK===============*/
 .marquee-container{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     padding: 40px 0;
     z-index: 2;
@@ -973,6 +972,138 @@ section {
     }
 }
 
+/*========PORTFOLIO=========*/
+.cert-container{
+    width: 100%;
+}
+
+.card-list{
+    display: flex;
+    gap: 1.5rem;
+    padding: 15px;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.6s ease-in-out;
+}
+.card-item{
+    flex: 0 0 auto;
+    width: 300px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.card-item.active{
+    transform: scale(1.05);
+    z-index: 2;
+}
+.card-item:not(.active){
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+.card-link{
+    display: block;
+    width: 280px;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.card-link:hover{
+    border-color: rgb(218, 118, 153);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.card-image{
+    width: 100%;
+    aspect-ratio: 13 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.badge{
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 12px 0 14px;
+    border-radius: 20px;
+}
+.badge.js{
+    color: #f5a700;
+    background-color: #fdf4db;
+}
+.badge.aws {
+    color: #253541;
+    background-color: #dee6ed;
+}
+.badge.cisco{
+    color: #1572B6;
+    background-color: #bbddf5;
+}
+
+
+.card-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #181717;
+    margin-bottom: 10px;
+}
+.card-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    margin-top: 16px;
+    border-radius: 50%;
+    border: 2px solid rgb(211, 74, 122);
+    color: rgb(211, 74, 122);
+    background: transparent;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}   
+.card-link:hover .card-btn{
+    background: rgb(211, 74, 122);
+    color: #fff;
+    transform: rotate(-45deg) scale(1.1);
+}
+
+.slider-pagination{
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+.slider-pagination .bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.slider-pagination .bullet.active{
+    background: rgb(210, 83, 128);
+    transform: scale(1.3);
+    box-shadow: 0 0 6px rgba(210, 83, 128, 0.5);
+}
+.slider-wrapper {
+    position: relative;
+    /* overflow: hidden; */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*===========RESPONSIVE=============*/
 
@@ -1016,6 +1147,12 @@ section {
     }
     .aboutcj-img img {
         max-width: 300px;
+    }
+    .card-item{
+        width: 220px;
+    }
+    .card-link {
+        width: 240px;
     }
 
 }
@@ -1087,7 +1224,8 @@ section {
     .about h1,
     .abt-exp h1,
     .abt-skills h1,
-    .tech-skills h1 {
+    .tech-skills h1,
+    .portf h1 {
         font-size: 2.5rem;
     }
     
@@ -1139,11 +1277,12 @@ section {
     }
 
     .tab-year {
-        font-size: 1.2rem;
+        font-size: 0.90rem;
     }
 
     .tab-company{
-        font-size: 1rem;
+        padding-bottom: 2px;
+        font-size: 1.1rem;
     }
 
     .details-header {
@@ -1179,6 +1318,16 @@ section {
 
     .marquee-row{
         margin-bottom: 20px;
+    }
+    .card-item{
+        width: 180px;
+    }
+    .card-link {
+        width: 100%;
+    }
+
+    .slider-wrapper {
+        padding: 0 0.5rem;
     }
 }
 
@@ -1230,7 +1379,8 @@ section {
     .about h1,
     .abt-exp h1,
     .abt-skills h1,
-    .tech-skills h1{
+    .tech-skills h1,
+    .portf h1{
         font-size: 2.5rem;
     }
     
@@ -1261,16 +1411,12 @@ section {
     }
 
     .tab-year {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .tab-company{
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         line-height: 1.2;
-    }
-
-    .tab-duration{
-        font-size: 0.75rem;
     }
 
     .experience-details {
@@ -1291,7 +1437,8 @@ section {
     .about h1,
     .abt-exp h1,
     .abt-skills h1,
-    .tech-skills h1 {
+    .tech-skills h1,
+    .portf h1 {
         font-size: 2.5rem;
         font-weight: 700;
         color: rgb(210, 83, 128);
@@ -1315,10 +1462,12 @@ section {
         font-size: 0.8rem;
     }
 
-    .javascript { 
-        width: 15px;
-        height: 14px;
-        border-radius: 8px;
+    .card-title{
+        font-size: 1rem;
+    }
+    .badge{
+        font-size: 0.75rem;
+        padding: 4px 10px;
     }
 
 }
