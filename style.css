@@ -289,7 +289,8 @@ section {
 .abt-exp,
 .abt-skills,
 .tech-skills,
-.portf{
+.portf,
+.projs{
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -314,7 +315,8 @@ section {
 .abt-exp h1,
 .abt-skills h1,
 .tech-skills h1,
-.portf h1{
+.portf h1,
+.projs h1{
     font-size: 3rem;
     color: rgb(210, 83, 128);
     margin: auto;
@@ -1008,6 +1010,7 @@ section {
     border: 1px solid transparent;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    cursor: default;
 }
 .card-link:hover{
     border-color: rgb(218, 118, 153);
@@ -1040,8 +1043,6 @@ section {
     color: #1572B6;
     background-color: #bbddf5;
 }
-
-
 .card-title{
     font-size: 1.1rem;
     font-weight: 600;
@@ -1068,12 +1069,12 @@ section {
     color: #fff;
     transform: rotate(-45deg) scale(1.1);
 }
-
 .slider-pagination{
     display: flex;
     justify-content: center;
     gap: 0.6rem;
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 .slider-pagination .bullet{
     width: 10px;
@@ -1096,13 +1097,137 @@ section {
 }
 
 
+/*=========PROJECTS============*/
+.projects{
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+.proj-container{
+    width: 100%;
+}    
+.proj-card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    gap:4rem;
+    padding: 20px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    transition: transform 0.6s ease-in-out;
+}
+.proj-card-item{
+    flex: 0 0 auto;
+    width: 300px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.proj-card-item.active{
+    transform: scale(1.05);
+    z-index: 2;
+}
+.proj-card-item:not(.active){
+    transform: scale(0.9);
+}
+.proj-card-link{
+    display: block;
+    width: 350px;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.proj-card-link:hover{
+    border-color: rgb(218, 118, 153);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.proj-card-image{
+    width: 100%;
+    aspect-ratio: 13 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.proj-badge{
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 12px 0 14px;
+    border-radius: 20px;
+}
+.proj-badge.js{
+    color: #f5a700;
+    background-color: #fdf4db;
+}
+.proj-badge.aws {
+    color: #253541;
+    background-color: #dee6ed;
+}
+.proj-badge.cisco{
+    color: #1572B6;
+    background-color: #bbddf5;
+}
+.proj-card-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #181717;
+    margin-bottom: 10px;
+}
+.proj-card-btn-github{
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin-top: 16px;
+    margin-right: 0.50rem;
+    border-radius: 50%;
+    border: 2px solid rgb(211, 74, 122);
+    color: rgb(211, 74, 122);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.proj-card-btn-arrow{
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin-top: 16px;
+    border-radius: 50%;
+    border: 2px solid rgb(211, 74, 122);
+    color: rgb(211, 74, 122);
+    background: transparent;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}   
+.proj-card-link:hover  .proj-card-btn-github:hover{
+    background: rgb(211, 74, 122);
+    color: #fff;
+}
+.proj-card-btn-arrow:hover{
+    background: rgb(211, 74, 122);
+    color: white;
+}
+.proj-desc{
+    color: #797878;
+    font-size: 14px;
+    margin: 3px auto;
+}
 
-
-
-
-
-
-
+.proj-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
 
 /*===========RESPONSIVE=============*/
@@ -1225,7 +1350,8 @@ section {
     .abt-exp h1,
     .abt-skills h1,
     .tech-skills h1,
-    .portf h1 {
+    .portf h1,
+    .projs h1 {
         font-size: 2.5rem;
     }
     
@@ -1311,11 +1437,9 @@ section {
         font-size: 20px;
         margin-right: 10px;
     }
-
     .tech-name{
         font-size: 0.85rem;
     }
-
     .marquee-row{
         margin-bottom: 20px;
     }
@@ -1325,10 +1449,11 @@ section {
     .card-link {
         width: 100%;
     }
-
     .slider-wrapper {
         padding: 0 0.5rem;
     }
+    
+
 }
 
 @media (max-width: 600px) {
@@ -1380,7 +1505,8 @@ section {
     .abt-exp h1,
     .abt-skills h1,
     .tech-skills h1,
-    .portf h1{
+    .portf h1,
+    .projs h1{
         font-size: 2.5rem;
     }
     
@@ -1438,7 +1564,8 @@ section {
     .abt-exp h1,
     .abt-skills h1,
     .tech-skills h1,
-    .portf h1 {
+    .portf h1,
+    .projs h1 {
         font-size: 2.5rem;
         font-weight: 700;
         color: rgb(210, 83, 128);
@@ -1469,6 +1596,7 @@ section {
         font-size: 0.75rem;
         padding: 4px 10px;
     }
+    
 
 }
 
@@ -1575,7 +1703,6 @@ section {
     transition: width 0.1s ease;
 }
 
-
 .typewriter-enhanced {
     overflow: hidden;
     border-right: 2px solid rgb(210, 83, 128);
@@ -1613,10 +1740,6 @@ section {
     50% { border-color: rgb(210, 83, 128); }
 }
 
-.parallax {
-    transform: translateY(0);
-    transition: transform 0.1s ease-out;
-}
 
 .social-links a {
     display: inline-block;
