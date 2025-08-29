@@ -23,7 +23,7 @@
                 <div class="link"><a href="#home">Home</a></div>
                 <div class="link"><a href="#aboutMe">About</a></div>
                 <div class="link"><a href="#portfolio">Portfolio</a></div>
-                <div class="link"><a href="#">Contact</a></div>
+                <div class="link"><a href="#contact">Contact</a></div>
             </div>
             <i class="fa-solid fa-bars hamburger"></i>
         </div>
@@ -32,7 +32,7 @@
                 <a href="#home">Home</a>
                 <a href="#aboutMe">About</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="">Contact</a>
+                <a href="#contact">Contact</a>
                 <i class="fa-solid fa-xmark cancel"></i>
             </div>
         </div>
@@ -546,11 +546,102 @@
 
         </section>
     </section>
+
+    <section id="contact">
+        <div class="portf fade-in">
+            <h3>GET IN TOUCH</h3>
+            <h1>Contact Me</h1>
+        </div>
+        <div class="contact-section-content scale-in">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-details">
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope" style="color: #d25380;"></i>
+                            </div>
+                            <div class="contact-method">
+                                <span>E-mail</span>
+                                <h4>cleofechristinejoy28@gmail.com</h4>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cleofechristinejoy28@gmail.com" target="_blank">Send <i class="fa-solid fa-arrow-right" style="color: #d25380;" ></i></a>
+                            </div>
+                        </li>
+
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-linkedin-in" style="color: #d25380;"></i>
+                            </div>
+                            <div class="contact-method">
+                                <span>LinkedIn</span>
+                                <h4>Christine Joy Cleofe</h4>
+                                <a href="https://www.linkedin.com/in/christine-joy-cleofe" target="_blank">Send <i class="fa-solid fa-arrow-right" style="color: #d25380;"></i></a>
+                            </div>
+                        </li>
+
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone" style="color: #d25380;"></i>
+                            </div>
+                            <div class="contact-method">
+                                <span>Phone Number</span>
+                                <h4>+63 956 449 8443</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact-form-body">
+                    <h2>Let's work together, send a message!</h2>
+                    <form action="" method="POST" id="cj-contact-form">
+                        <div class="input-group">
+                            <input type="text" name="full-name" placeholder="Name *" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="email" placeholder="Email *" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="subject" placeholder="Your Subject *" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="Your Message *" required></textarea>
+                        </div>
+                        <div class="input-group send-message">
+                            <button class="contact-main-btn fill-btn submit-btn" name="submit" type="submit">Send Message</button>
+                            <div class="contact-btn-alert"></div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="cj-footer">
+        <div class="cj-container">
+            <div class="inner">
+                <div class="cj-logo">
+                    <a href="#home"><span><i>CJ.</i></span></a>
+                </div>
+                <ul class="footer-menu">
+                    <li class="menu-item"><a href="#home">Home</a></li>
+                    <li class="menu-item"><a href="#aboutMe">About</a></li>
+                    <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+                </ul>
+                <p class="copyright">@ 2025 Christine Joy Cleofe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
         
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <script src="/script.js"></script>
     <script src="/timeline.js"></script>
+    <script src="/receiveEmail.js"></script>
 
 </body>
 </html>

@@ -22,9 +22,9 @@ function handleResize() {
     hamburger.style.display = "none";
     cancel.style.display = "none";
   } else {
-    navLinks.style.display = "none";
-    hamburger.style.display = "block";
-    cancel.style.display = "none";
+      navLinks.style.display = "none";
+      hamburger.style.display = "block";
+      cancel.style.display = "none";
   }
 }
 
@@ -37,10 +37,10 @@ window.addEventListener("scroll", function(){
 })
 
 const typed = new Typed(".auto-type",{
-    strings: ["an Aspiring Developer", "a Designer", "a Project Manager", "an Athlete"],
-    typeSpeed: 100,
-    backSpeed: 150,
-    loop: true
+  strings: ["an Aspiring Developer", "a Designer", "a Project Manager", "an Athlete"],
+  typeSpeed: 100,
+  backSpeed: 150,
+  loop: true
 })
 
 function openResume() {
