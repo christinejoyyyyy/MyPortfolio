@@ -1,4 +1,3 @@
-// ========== EXPERIENCE TIMELINE FUNCTIONALITY ========== 
 document.addEventListener('DOMContentLoaded', function() {
     
     const experiences = [
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
 
-    // Initialize timeline only if elements exist
     function initializeTimeline() {
         const progressDots = document.getElementById('progressDots');
         const timelineTabs = document.getElementById('timelineTabs');
@@ -66,26 +64,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const progressBar = document.getElementById('progressBar'); // Fixed ID
         const progressDots = document.querySelectorAll('.progress-dot');
         
-        // Update active tab
         tabs.forEach((tab, index) => {
             tab.classList.toggle('active', index === currentIndex);
         });
         
-        // Update progress bar
         if (progressBar) {
             const progressPercentage = ((currentIndex + 1) / experiences.length) * 100;
             progressBar.style.width = `${progressPercentage}%`;
         }
         
-        // Update progress dots
         progressDots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
         
-        // Update experience details
         updateExperienceDetails();
         
-        // Update tabs position for mobile
         updateTabsPosition();
     }
 
@@ -97,15 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const isMobile = window.innerWidth <= 768;
     
     if (isMobile) {
-        // Mobile: Show one tab at a time, perfectly centered
-        const tabWidth = 200; // Tab width + margins (180px + 20px total margin)
+        const tabWidth = 200; 
         const wrapperWidth = timelineWrapper.offsetWidth;
         
-        // Calculate translation to center the current tab
         const translateX = -(currentIndex * tabWidth) + (wrapperWidth / 2) - (tabWidth / 2);
         timelineTabs.style.transform = `translateX(${translateX}px)`;
     } else {
-        // Desktop: Smart positioning logic (unchanged)
         const tabWidth = 270;
         const wrapperWidth = timelineWrapper.offsetWidth;
         const totalTabsWidth = experiences.length * tabWidth;
@@ -139,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
         detailsContainer.classList.remove('show');
         
         setTimeout(() => {
-            // Generate logo HTML based on type
             let logoHTML = '';
             if (experience.logoType === 'image') {
                 logoHTML = `<img src="${experience.logo}" alt="${experience.company} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -197,15 +186,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Make functions global so they can be called from HTML onclick
     window.navigateTimeline = navigateTimeline;
     window.goToExperience = goToExperience;
 
-    // Handle window resize
     window.addEventListener('resize', updateTabsPosition);
 
-    // Initialize timeline when DOM is ready
     setTimeout(() => {
         initializeTimeline();
-    }, 100); // Small delay to ensure all elements are rendered
+    }, 100); 
 });

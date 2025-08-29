@@ -10,7 +10,6 @@ cjContactFormAlert = document.querySelector(".contact-btn-alert");
 
 cjContactForm.addEventListener('submit', function(event) {
     event.preventDefault();
-                // these IDs from the previous steps
         emailjs.sendForm('service_vtgpq2c', 'template_wte5cgn', '#cj-contact-form')
             .then(() => {
                 // console.log('SUCCESS!');
