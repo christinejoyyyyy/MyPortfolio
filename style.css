@@ -1926,6 +1926,18 @@ section {
 
 /* Mobile */
 @media (max-width: 480px) {
+    .timeline-content h3,
+    .timeline-content ul,
+    .timeline-content p{
+        text-align: left;
+    }
+    .timeline-content span{
+        display: block;
+        text-align: left;
+    }
+    .experiences{
+        margin: 0;;
+    }
     .timeline-wrapper{
         width: 220px;
     }
