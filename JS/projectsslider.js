@@ -76,3 +76,9 @@ function githubEieLink(){
     window.open('https://github.com/christinejoyyyyy/MyPortfolio');
 
 }
+function githubPassGenLink(){
+    window.open('https://github.com/christinejoyyyyy/RandomPasswordGenerator');
+}
+function githubRBI(){
+    window.open('https://github.com/christinejoyyyyy/Barangay-Household-Record-System');
+}
