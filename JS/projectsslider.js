@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Onclick open github link
 function githubEieLink(){
-    window.open('https://github.com/christinejoyyyyy/MyPortfolio');
+    window.open('https://github.com/christinejoyyyyy/EIEPIMS-Capstone');
 
 }
 function githubPassGenLink(){
